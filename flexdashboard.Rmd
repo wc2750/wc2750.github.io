@@ -1,0 +1,82 @@
+---
+title: "Flexdashboard"
+output: 
+  flexdashboard::flex_dashboard:
+    orientation: columns
+    vertical_layout: fill
+    source: embed
+    code_folding: hide
+    theme: simplex
+---
+
+```{r include=FALSE}
+library(tidyverse)
+library(plotly)
+library(flexdashboard)
+library(p8105.datasets)
+```
+
+```{r include = F, message = F}
+# import nyc restaurant inspection data
+data("rest_inspec")
+nyc_inspect = rest_inspec %>%
+  select(boro, cuisine_description, inspection_date, score) %>%
+  mutate(inspection_date = as.Date(inspection_date)) %>%
+  mutate(cuisine_description = 
+           recode(cuisine_description, 
+                  "Latin (Cuban, Dominican, Puerto Rican, South & Central American)" = "Latin", 
+                  "Ice Cream, Gelato, Yogurt, Ices" = "Ices")) %>%
+  filter(boro == "MANHATTAN",
+         score > 85,
+         score != is.na(score))
+```
+
+Column {data-width=650}
+-----------------------------------------------------------------------
+
+### Chart A
+
+```{r warning = F}
+nyc_inspect %>%
+  mutate(text_label = str_c("Cuisine: ", cuisine_description)) %>%
+  plot_ly( x = ~inspection_date, y = ~score, color = ~cuisine_description, type = "scatter", mode = "markers", text = ~text_label, alpha = 0.5, colors = "viridis") %>%
+  layout(
+    title = "Inspection Date vs. Score over 85 of Restaurants in Manhattan", 
+    xaxis = list(title = "Inspection date"),
+    yaxis = list(title = "Score"),
+    titlefont = list(size = 14)
+    )
+```
+
+Column {data-width=350}
+-----------------------------------------------------------------------
+
+### Chart B
+
+```{r warning = F}
+nyc_inspect %>%
+  mutate(cuisine_description = fct_reorder(cuisine_description, score)) %>%
+  plot_ly(y = ~score, color = ~cuisine_description, type = "box", colors = "viridis") %>%
+  layout(
+    xaxis = list(title = "Cuisine types", tickfont = list(size = 8)),
+    yaxis = list(title = "Score"),
+    title = "Cusine types vs. Score over 85 of Restaurants in Manhattan",
+    titlefont = list(size = 14)
+  )
+```
+
+### Chart C
+
+```{r warning = F}
+nyc_inspect %>%
+  count(cuisine_description) %>%
+  mutate(cuisine_description = fct_reorder(cuisine_description, n)) %>%
+  plot_ly(x = ~cuisine_description, y = ~n, color = ~cuisine_description, type = "bar", colors = "viridis") %>%
+  layout(
+    xaxis = list(title = "Cuisine types", tickfont = list(size = 8)),
+    yaxis = list(title = "Count"),
+    title = "Number of different Cusine Types of Manhattan restaurants having score over 85",
+    titlefont = list(size = 12)
+  )
+```
+
