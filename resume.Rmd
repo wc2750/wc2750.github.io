@@ -1,0 +1,47 @@
+---
+title: "Weixi Chen"
+output:
+  html_document:
+    toc: true
+    toc_float: true
+    theme: simplex
+---
+
+## Education
+* **Columbia University in the City of New York**
+    + M.S candidate in Biostatistics
+* **University of California, San Diego**
+    + B.S in General Biology
+
+## Skills
+* **Computer skills**
+  + R, SPSS, MATLAB, Microsoft Excel, PowerShell
+    
+## Researches
+* **Center for Healthy Eating and Activity Research (CHEAR), Rady Children’s Hospital, UCSD**\
+_Data Research Assistant; 02/2019-12/2019; San Diego, CA_
+    + Oversaw data management of 6 ongoing projects on innovative treatment on obesity and overeating issues involving children, parents, and veterans
+    + Assisted in the preparation of new intervention studies, created assessment tasks data collection templates, and provided computer-based tasks (Inquisit, E-Prime, NBS Presentation) workshop for study coordinators
+    + Used Excel and PowerShell to complete post-survey data cleaning and to make data inventory reports; Used R to visualize anthropometric research data for coding experience; Edited and troubleshot behavioral tasks scripts; Managed REDCap survey system, proofread dictionaries and checked data entry discrepancies
+    + Interviewed data research assistants, and trained them with data export, validation and processing of heart rate variability\
+* **The State Key Laboratory of Biotherapy, West China Hospital, Sichuan University**\
+_Lab Research Assistant; 06/2018-08/2018; Chengdu, China_
+    + Assisted oncoproteomics group with all aspects of laboratory projects on tumorigenesis and development
+    +	Conducted experiments and collated detailed protocols on cell culture, colony formation, establishment of animal model, western blot (analyzed with Image Studio Lite), co-immunoprecipitation, and EdU assay under supervision
+    + Tested human prostate cancer cells’ protein expression to assigned drugs and investigated on the mechanism of drug resistance; Analyzed light absorbance data of colorectal cancer cells treated with drugs and LDH assay
+    + Participated in graduate student seminars on oncology and shared ideas on innovative immunofluorescence approaches with pharmaceutics staff in biology techniques meetings
+
+## Academic projects
+* **BIMM 143: Bioinformatics Laboratory, UCSD**\
+_Bioinformatics Data Analysis with R; 09/2019-12/2019; San Diego, CA_
+    + Used Bio3D packages to dock drug molecules into HIV-1 protease
+    +	Performed unsupervised clustering, Principle Component Analysis, and DESeq analysis on RNA-Seq data
+    +	Inspected gene sequence data at Unix command line, understood the workflows for batch processing, and practiced Github files management
+    + Picked a novel human fetal liver mRNA sequence and used R to grasp the principles of NIH database searching, BLAST sequence alignment, genome functional annotation, and protein structure visualization
+
+## Activities
+* **Graduate Student Seminars on Cancer Research**\
+_Participant; 06/2018-08/2018_
+    + Discussed with peers and professors on autophagy and redox regulation in tumorigenesis
+    + Debated on the main ideas of recent cancer cells metabolism papers and modern biology approaches
+
