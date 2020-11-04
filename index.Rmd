@@ -1,0 +1,22 @@
+---
+title: "Welcome to Weixi's website"
+output:
+  html_document:
+    toc: true
+    toc_float: true
+    theme: simplex
+---
+
+<img src="image/cat.gif" style="width:50%">
+
+## Content
+* resume
+* flexdashboard
+
+## Links
+* [My github](https://github.com/wc2750)
+
+## Contact
+Phone: +86-17721880526\
+Email: [wc2750@cumc.columbia.edu](wc2750@cumc.columbia.edu)
+
