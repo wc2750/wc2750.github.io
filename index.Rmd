@@ -10,8 +10,8 @@ output:
 <img src="image/cat.gif" style="width:50%">
 
 ## Content
-* resume
-* flexdashboard
+* [resume](https://wc2750.github.io/resume.html)
+* [flexdashboard](https://wc2750.github.io/flexdashboard.html)
 
 ## Links
 * [My github](https://github.com/wc2750)
